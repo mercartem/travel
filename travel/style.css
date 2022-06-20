@@ -463,7 +463,13 @@ html {
     box-sizing: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Aleo';
     font-style: normal;
     font-size: 16px;
@@ -473,6 +479,8 @@ body {
     background: url(assets/img/bg.jpg) no-repeat center;
     background-size: auto;
     min-height: 3735px;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
@@ -489,7 +497,6 @@ body {
 
 .header_wrapper {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 90px;
@@ -501,12 +508,10 @@ body {
 
 .header_list {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .header_logo {
     display: flex;
-    flex-wrap: wrap;
     height: 90px;
 }
 
@@ -562,7 +567,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     width: 103px;
     height: 41px;
     color: #FFFFFF;
@@ -611,9 +615,9 @@ body {
     margin-bottom: 46px;
 }
 
-.search_form-info {
+.search_form {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .search_form-field {
@@ -653,8 +657,8 @@ body {
     align-items: center;
     padding: 10px 32px;
     gap: 10px;
-    position: relative;
-    left: -246px;
+    position: absolute;
+    left: 646px;
     top: 18px;
     width: 228px;
     height: 59px;
@@ -680,14 +684,13 @@ body {
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
-    margin-right: 414px;
-    margin-left: 414px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 40px;
 }
 
 .steps_cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 30px;
 }
@@ -722,7 +725,6 @@ body {
 
 .steps_subtitles {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     font-family: 'Aleo';
     font-style: normal;
@@ -730,6 +732,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    margin-bottom: 97px;
 }
 
 .steps_subtitle-1 {
@@ -746,3 +749,236 @@ body {
     position: relative;
     left: -23px;
 }
+
+/*Steps style finish*/
+
+
+/*Destinations style start*/
+
+.title_destinations {
+    display: flex;
+    justify-content: center;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    margin-bottom: 46px;
+}
+
+.destinations_cards {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.destinations_card {
+    border-radius: 16px;
+}
+
+.slider_item {
+    position: relative;
+}
+
+.slider_title {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.destinations_pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.ellipse_1, .ellipse_3 {
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+}
+
+.ellipse_2 {
+    width: 20px;
+    height: 20px;
+    background: #F2785C;
+    border-radius: 50%;
+}
+
+.destinations_form {
+    display: flex;
+    justify-content: center;
+}
+
+.destinations_form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    gap: 10px;
+    width: 228px;
+    height: 59px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: 0 solid white;
+    margin-bottom: 80px;
+}
+
+.destinations_form-button-title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.destinations_form-button:hover, .destinations_form-button:focus, .destinations_form-button:active {
+    background: #0d3f48;
+}
+
+/*Destinations style finish*/
+
+
+/*Stories style start*/
+
+.stories {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 119px;
+}
+
+.stories_title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    margin-bottom: 80px;
+}
+
+.stories_story {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.stories_img {
+    justify-content: flex-start;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+}
+
+.stories_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.stories_story-title {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+    margin-bottom: 24px;
+}
+
+.stories_story-text {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.stories_link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+    text-decoration: underline;
+}
+
+.stories_form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 41px;
+}
+
+.stories_form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    gap: 10px;
+    width: 228px;
+    height: 59px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: 0 solid white;
+}
+
+.stories_form-button-title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.stories_form-button:hover, .stories_form-button:focus, .stories_form-button:active {
+    background: #0d3f48;
+}
+
+/*Stories style finish*/
+
+
+/*Footer style start*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 119px;
+    padding-left: 260px;
+    height: 61px;
+}
+
+.footer_title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer_contacts_2 {
+    display: flex;
+    gap: 20px;
+}
+
+/*Footer style finish*/
