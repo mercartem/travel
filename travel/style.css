@@ -483,11 +483,6 @@ body {
     padding: 0;
 }
 
-.wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 .main {
     max-width: 1440px;
     margin: 0 auto; 
@@ -495,7 +490,9 @@ body {
 
 /* Header style start*/
 
-.header_wrapper {
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -735,17 +732,17 @@ body {
     margin-bottom: 97px;
 }
 
-.steps_subtitle-1 {
+.steps_subtitle_1 {
     position: relative;
     left: 22px;
 }
 
-.steps_subtitle-2 {
+.steps_subtitle_2 {
     position: relative;
     left: 35px;
 }
 
-.steps_subtitle-3 {
+.steps_subtitle_3 {
     position: relative;
     left: -23px;
 }
@@ -779,11 +776,11 @@ body {
     border-radius: 16px;
 }
 
-.slider_item {
+.destinations_slider-item {
     position: relative;
 }
 
-.slider_title {
+.destinations_slider-title {
     position: absolute;
     bottom: 40px;
     left: 15px;
@@ -803,14 +800,14 @@ body {
     margin-bottom: 40px;
 }
 
-.ellipse_1, .ellipse_3 {
+.destinations_ellipse_1, .destinations_ellipse_3 {
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
 }
 
-.ellipse_2 {
+.destinations_ellipse_2 {
     width: 20px;
     height: 20px;
     background: #F2785C;
