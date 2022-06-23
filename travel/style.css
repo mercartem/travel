@@ -468,8 +468,8 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    width: 1440px;
+    margin: 0 auto; 
     font-family: 'Aleo';
     font-style: normal;
     font-size: 16px;
@@ -477,22 +477,12 @@ body {
     font-weight: normal;
     color: #FFFFFF;
     background: url(assets/img/bg.jpg) no-repeat center;
-    background-size: auto;
     min-height: 3735px;
-    margin: 0;
-    padding: 0;
-}
-
-.main {
-    max-width: 1440px;
-    margin: 0 auto; 
 }
 
 /* Header style start*/
 
 .header {
-    max-width: 1440px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
