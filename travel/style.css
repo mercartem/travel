@@ -457,19 +457,17 @@ textarea {
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
+    max-width: 1440px;
+    max-height: 3735px;
+    margin: 0 auto;
     font-family: 'Aleo';
     font-style: normal;
     font-size: 16px;
@@ -477,26 +475,20 @@ body {
     font-weight: normal;
     color: #FFFFFF;
     background: url(assets/img/bg.jpg) no-repeat center;
-    background-size: auto;
-    min-height: 3735px;
-    margin: 0;
-    padding: 0;
 }
 
-.main {
-    max-width: 1440px;
-    margin: 0 auto; 
-}
 
 /* Header style start*/
 
 .header {
-    max-width: 1440px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 90px;
     padding-left: 120px;
     padding-right: 120px;
     background: rgba(242, 120, 92, 0.7);
@@ -531,8 +523,6 @@ body {
 }
 
 .header_nav {
-    margin-top: 35px;
-    margin-bottom: 34px;
     margin-left: 166px;
     margin-right: 196px;
 }
@@ -561,7 +551,6 @@ body {
 
 .login_form-button {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 103px;
@@ -588,6 +577,8 @@ body {
 /*Preview style start*/
 
 .preview {
+    display: flex;
+    flex-direction: column;
     padding-top: 32px;
     padding-left: 120px;
     margin-bottom: 334px;
@@ -979,3 +970,20 @@ body {
 }
 
 /*Footer style finish*/
+
+
+/*Adaptive style start*/
+
+@media (max-width: 390px) {
+    .header {
+        display: flex;
+        margin-left: 16px;
+        margin-right: 16px;
+        background: none;
+        box-shadow: none;
+    }
+
+    body {
+    
+    }
+}
