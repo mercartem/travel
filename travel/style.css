@@ -457,16 +457,18 @@ textarea {
 
 html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    max-width: 1440px;
-    max-height: 3735px;
+    width: 1440px;
     margin: 0 auto;
     font-family: 'Aleo';
     font-style: normal;
@@ -474,42 +476,41 @@ body {
     line-height: 1.2;
     font-weight: normal;
     color: #FFFFFF;
-    background: url(assets/img/bg.jpg) no-repeat center;
+    min-height: 3735px;
 }
 
 
 /* Header style start*/
 
 .header {
+    background: url(assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center 0;
+}
+
+.header_wrapper {
+    height: 90px;
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 120px;
-    background: rgba(242, 120, 92, 0.7);
+    padding-left: 8.3%;
+    padding-right: 8.3%;
+    background-color: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
 .header_list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header_logo {
     display: flex;
-    height: 90px;
 }
 
 .header_logo-pic {
     height: 30px;
     width: 30px;
     margin-right: 6px;
-    margin-top: 26px;
-    margin-bottom: 34px;
 }
 
 .header_logo-title {
@@ -518,13 +519,12 @@ body {
     font-weight: 600;
     font-size: 32px;
     line-height: 39px;
-    margin-top: 25px;
-    margin-bottom: 34px;
+    white-space: nowrap;
 }
 
 .header_nav {
-    margin-left: 166px;
-    margin-right: 196px;
+    margin-right: 5%;
+    margin-left: 2.5%;
 }
 
 .header_item {
@@ -551,6 +551,7 @@ body {
 
 .login_form-button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 103px;
@@ -577,15 +578,15 @@ body {
 /*Preview style start*/
 
 .preview {
-    display: flex;
-    flex-direction: column;
+    padding-left: 8.3%;
+    padding-right: 29.7%;
     padding-top: 32px;
-    padding-left: 120px;
-    margin-bottom: 334px;
+    padding-bottom: 254px;
+    margin-bottom: 80px;
+    background: url(assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center -90px;
 }
 
 .preview_title {
-    max-width: 892px;
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 700;
@@ -604,17 +605,21 @@ body {
 }
 
 .search_form {
-    position: relative;
     display: flex;
-}
-
-.search_form-field {
-    width: 892px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 41px;
+    padding-right: 18px;
     height: 95px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     border: 0 solid rgba(255, 255, 255, 0.7);
-    padding: 41px 291px 41px 41px;
+}
+
+.search_form-field {
+    width: 100%;
+    background: transparent;
+    border: 0;
     font-family: 'Aleo';
     font-style: italic;
     font-weight: 400;
@@ -640,20 +645,15 @@ body {
     line-height: 32px;
     color: #FFFFFF;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 32px;
-    gap: 10px;
-    position: absolute;
-    left: 646px;
-    top: 18px;
-    width: 228px;
+    padding: 13px 33px;
     height: 59px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: 0 solid #0D606F;
+    white-space: nowrap;
 }
 
 .search_form-submit:hover, .search_form-submit:focus, .search_form-submit:active {
@@ -844,9 +844,6 @@ body {
 /*Stories style start*/
 
 .stories {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 119px;
 }
 
 .stories_title {
@@ -858,7 +855,19 @@ body {
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+}
+
+.stories_wrapper {
+    background: url(./assets/img/Rectangle\ 27.jpg) no-repeat center 0;
+}
+
+.stories_wrapper-bg {
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 40px;
 }
 
 .stories_story {
@@ -872,7 +881,7 @@ body {
     border-radius: 16px;
 }
 
-.stories_wrapper {
+.story_wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 40px;
@@ -910,8 +919,7 @@ body {
 .stories_form {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 41px;
+    margin-top: 41px;
 }
 
 .stories_form-button {
@@ -953,6 +961,7 @@ body {
     padding-right: 119px;
     padding-left: 260px;
     height: 61px;
+    background: url(./assets/img/Rectangle\ 27.jpg) no-repeat center -1270px;
 }
 
 .footer_title {
@@ -970,20 +979,3 @@ body {
 }
 
 /*Footer style finish*/
-
-
-/*Adaptive style start*/
-
-@media (max-width: 390px) {
-    .header {
-        display: flex;
-        margin-left: 16px;
-        margin-right: 16px;
-        background: none;
-        box-shadow: none;
-    }
-
-    body {
-    
-    }
-}
