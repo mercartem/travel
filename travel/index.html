@@ -6,47 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./assets/svg/favicon.ico">
+    <link rel="icon" href="./assets/svg/icons8-wedding-travel-48.ico">
     <script src="./index.js"></script>
 </head>
 <body>
     <header class="header">
-        <div class="header_logo">
-            <img class="header_logo-pic" src="./assets/svg/vector.svg" alt="Travel Portal ">
-            <p class="header_logo-title">Travel Portal</p>
+        <div class="header_wrapper">
+            <div class="header_logo">
+                <img class="header_logo-pic" src="./assets/svg/vector.svg" alt="Travel Portal ">
+                <p class="header_logo-title">Travel Portal</p>
+            </div>
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li class="header_item">
+                        <a href="#preview" class="header_link">How It Works</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="#steps" class="header_link">Plan Your Trip</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="#destinations" class="header_link">Destinations</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="#stories" class="header_link">Travel Stories</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="login_form">   
+                <button type="button" class="login_form-button">Login</button>
+            </form>
         </div>
-        <nav class="header_nav">
-            <ul class="header_list">
-                <li class="header_item">
-                    <a href="#preview" class="header_link">How It Works</a>
-                </li>
-                <li class="header_item">
-                    <a href="#steps" class="header_link">Plan Your Trip</a>
-                </li>
-                <li class="header_item">
-                    <a href="#destinations" class="header_link">Destinations</a>
-                </li>
-                <li class="header_item">
-                    <a href="#stories" class="header_link">Travel Stories</a>
-                </li>
-            </ul>
-        </nav>
-        <form class="login_form">   
-            <button type="button" class="login_form-button">Login</button>
-        </form>
     </header>
     <main class="main">
         <section class="preview" id="preview">
-            <div>
-                <h1 class="preview_title">Explore the beauty of the World</h1>
-                <p class="preview_subtitle">Receive personalized recommendations for countries, hotels, activities and more</p>
-                <form class="search_form">
-                    <p class="search_form-info">
-                        <input type="text" class="search_form-field" placeholder="What would you like to do?">
-                        <button type="submit" class="search_form-submit">Start Planning</button>
-                    </p>
-                </form>
-            </div>
+            <h1 class="preview_title">Explore the beauty of the World</h1>
+            <p class="preview_subtitle">Receive personalized recommendations for countries, hotels, activities and more</p>
+            <form class="search_form">
+                <input type="text" class="search_form-field" placeholder="What would you like to do?">
+                <button type="submit" class="search_form-submit">Start Planning</button>
+            </form>
         </section>
         <section class="steps" id="steps">
             <h2 class="steps_title">3 STEPS TO THE PERFECT TRIP</h2>
@@ -103,41 +101,45 @@
         </section>
         <section class="stories" id="stories">
             <h2 class="stories_title">TRAVEL STORIES</h2>
-            <div class="stories_story">
-                <img class="stories_img" src="./assets/img/thai.jpg" alt="Thailand">
-                <div class="stories_wrapper">
-                    <h3 class="stories_story-title">10 Photos of Attractive Thailand</h3>
-                    <p lang="zxx" class="stories_story-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
+            <div class="stories_wrapper">
+                <div class="stories_wrapper-bg">
+                    <div class="stories_story">
+                        <img class="stories_img" src="./assets/img/thai.jpg" alt="Thailand">
+                        <div class="story_wrapper">
+                            <h3 class="stories_story-title">10 Photos of Attractive Thailand</h3>
+                            <p lang="zxx" class="stories_story-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="stories_story">
+                        <img class="stories_img" src="./assets/img/utah.jpg" alt="Utah">
+                        <div class="story_wrapper">
+                            <h3 class="stories_story-title">Canyonlands National Park, Utah</h3>
+                            <p lang="zxx" class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="stories_story">
+                        <img class="stories_img" src="./assets/img/mount.jpg" alt="Mountains">
+                        <div class="story_wrapper">
+                            <h3 class="stories_story-title">I left my heart in the Mountains!</h3>
+                            <p lang="zxx" class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="stories_story">
+                        <img class="stories_img" src="./assets/img/journey.jpg" alt="Journey">
+                        <div class="story_wrapper">
+                            <h3 class="stories_story-title">The Longest journey in my life!</h3>
+                            <p class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
+                        </div>
+                    </div>
+                    <form class="stories_form">
+                        <button type="button" class="stories_form-button">
+                            <img class="stories_form-button-pic" src="./assets/svg/arrow.svg" alt="arrow">
+                            <span class="stories_form-button-title">See More</span>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="stories_story">
-                <img class="stories_img" src="./assets/img/utah.jpg" alt="Utah">
-                <div class="stories_wrapper">
-                    <h3 class="stories_story-title">Canyonlands National Park, Utah</h3>
-                    <p lang="zxx" class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
-                </div>
-            </div>
-            <div class="stories_story">
-                <img class="stories_img" src="./assets/img/mount.jpg" alt="Mountains">
-                <div class="stories_wrapper">
-                    <h3 class="stories_story-title">I left my heart in the Mountains!</h3>
-                    <p lang="zxx" class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
-                </div>
-            </div>
-            <div class="stories_story">
-                <img class="stories_img" src="./assets/img/journey.jpg" alt="Journey">
-                <div class="stories_wrapper">
-                    <h3 class="stories_story-title">The Longest journey in my life!</h3>
-                    <p class="stories_story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a class="stories_link" href="#!">Read More</a></p>
-                </div>
-            </div>
-            <form class="stories_form">
-                <button type="button" class="stories_form-button">
-                    <img class="stories_form-button-pic" src="./assets/svg/arrow.svg" alt="arrow">
-                    <span class="stories_form-button-title">See More</span>
-                </button>
-            </form>
         </section>
         <footer class="footer">
             <div class="footer_contacts_1">
@@ -152,4 +154,4 @@
         </footer>
     </main>
 </body>
-</html>
+</html> 
