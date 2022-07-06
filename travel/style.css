@@ -497,6 +497,7 @@ body {
 
 .header_list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header_logo {
@@ -845,7 +846,6 @@ body {
 
 
 /*Stories style start*/
-
 
 .stories_title {
     display: flex;
