@@ -457,18 +457,16 @@ textarea {
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    width: 1440px;
+    max-width: 1440px;
+    overflow-x: hidden;
     margin: 0 auto;
     font-family: 'Aleo';
     font-style: normal;
@@ -476,7 +474,6 @@ body {
     line-height: 1.2;
     font-weight: normal;
     color: #FFFFFF;
-    min-height: 3735px;
 }
 
 
@@ -523,8 +520,8 @@ body {
 }
 
 .header_nav {
-    margin-right: 5%;
-    margin-left: 2.5%;
+    margin-right: 2%;
+    margin-left: 3%;
 }
 
 .header_item {
@@ -547,6 +544,15 @@ body {
 
 .header_link:hover, .header_link:focus, .header_link:active {
     opacity: .75;
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+}
+
+.header_overlay {
+    display: none;
 }
 
 .login_form-button {
@@ -578,12 +584,15 @@ body {
 /*Preview style start*/
 
 .preview {
+    background: url(assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center -90px;
+}
+
+.preview_wrapper {
     padding-left: 8.3%;
     padding-right: 29.7%;
     padding-top: 32px;
     padding-bottom: 254px;
-    margin-bottom: 80px;
-    background: url(assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center -90px;
+    margin-bottom: 80px; 
 }
 
 .preview_title {
@@ -608,8 +617,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 41px;
-    padding-right: 18px;
+    padding-left: 4.5%;
+    padding-right: 2%;
     height: 95px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
@@ -678,64 +687,55 @@ body {
 }
 
 .steps_cards {
+    padding-left: 9.2%;
+    padding-right: 9.2%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: 97px;
+}
+
+.steps_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+
+.steps_card-one {
+    align-items: flex-start;
+}
+
+.steps_card-three {
+    align-items: flex-end;
+}
+
+.steps_card-icon {
+    width: 100px;
+    height: 100px;
+    background: #F2785C;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
 }
 
-.steps_card-icon-1 {
-    position: relative;
-    left: 14px;
-    width: 100px;
-    height: 100px;
-    background: #F2785C;
-    border-radius: 16px;
-    padding: 28px 25px 27px 25px;
+.icon-one {
+    margin-left: 18%;
 }
 
-.steps_card-icon-2 {
-    width: 100px;
-    height: 100px;
-    background: #F2785C;
-    border-radius: 16px;
-    padding: 24px;
-}
-
-.steps_card-icon-3 {
-    position: relative;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background: #F2785C;
-    border-radius: 16px;
-    padding: 28px 20px 27px 20px;
+.icon-three {
+    margin-right: 28%;
 }
 
 .steps_subtitles {
-    display: flex;
-    justify-content: space-around;
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
-    margin-bottom: 97px;
-}
-
-.steps_subtitle_1 {
-    position: relative;
-    left: 22px;
-}
-
-.steps_subtitle_2 {
-    position: relative;
-    left: 35px;
-}
-
-.steps_subtitle_3 {
-    position: relative;
-    left: -23px;
 }
 
 /*Steps style finish*/
@@ -769,6 +769,10 @@ body {
 
 .destinations_slider-item {
     position: relative;
+}
+
+.mobile {
+    display: none;
 }
 
 .destinations_slider-title {
@@ -857,13 +861,14 @@ body {
 
 .stories_wrapper {
     background: url(./assets/img/Rectangle\ 27.jpg) no-repeat center 0;
+    background-size: cover;
 }
 
 .stories_wrapper-bg {
     background: rgba(255, 255, 255, 0.7);
     padding-top: 40px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 8.3%;
+    padding-right: 8.3%;
     padding-bottom: 40px;
 }
 
@@ -901,6 +906,11 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
 }
 
 .stories_link {
@@ -916,7 +926,7 @@ body {
 .stories_form {
     display: flex;
     justify-content: center;
-    margin-top: 41px;
+    margin-top: 40px;
 }
 
 .stories_form-button {
@@ -976,3 +986,489 @@ body {
 }
 
 /*Footer style finish*/
+
+
+/*Adaptive style start*/
+
+@media (max-width: 1024px) {
+    .header_wrapper {
+        justify-content: space-around;
+        padding: 0 auto;
+    }
+
+    .preview {
+        text-align: center;
+    }
+
+    .preview_wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_list {
+        flex-wrap: wrap;
+    }
+
+    .header_logo-title {
+        display: none;
+    }
+
+    .preview_wrapper {
+        margin-bottom: 20px;
+    }
+
+    .preview_title {
+        font-size: 60px;
+        line-height: 70px;
+        text-align: center;
+    }
+
+    .preview_subtitle {
+        text-align: center;
+    }
+
+    .search_form-field::placeholder {
+        font-size: 15px;
+        line-height: 29px;
+    }
+
+    .search_form-submit {
+        width: 150px;
+        padding: 10px 32px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    .steps_title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+    }
+
+    .steps_cards {
+        margin-bottom: 20px;
+    }
+
+    .steps_card-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .steps_subtitles {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .title_destinations {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+    }
+
+    .destinations_card {
+        width: 360px;
+        height: 210px;
+    }
+
+    .destinations_slider-item:nth-child(1) {
+        order: 2;
+    }
+
+    .destinations_slider-item:nth-child(2) {
+        order: 3;
+    }
+
+    .destinations_pagination {
+        margin-bottom: 20px;
+    }
+
+    .destinations_form-button {
+        margin-bottom: 20px;
+    }
+
+    .stories_title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .stories_story-title {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .stories_story-text {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .stories_link {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .stories_form {
+        margin-top: 20px;
+    }
+
+    .footer {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .footer_title {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    
+    .header {
+        background: url(./assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 2.jpg) no-repeat center;
+        height: 251px;
+    }
+
+    .header_wrapper {
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+        box-shadow: none;
+        height: 251px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 43px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .preview {
+        background: none;
+        height: 251px;
+        margin-top: -251px;
+        margin-bottom: 20px;
+    }
+
+    .stories_wrapper {
+        height: 628px;
+        background: url(./assets/img/Rectangle\ 28.jpg) no-repeat center 0;
+        background-size: cover;
+    }
+
+    .footer {
+        background: url(./assets/img/Rectangle\ 28.jpg) no-repeat center -628px;
+    }
+
+    .header_logo-title {
+        display: none;
+    }
+
+    .login_form {
+        display: none;
+    }
+
+    .header_logo-pic {
+        width: 29px;
+        height: 32px;
+        padding-top: 3px;
+    }
+
+    .header_nav {
+        position: absolute;
+        width: 165px;
+        height: 250px;
+        margin: 0;
+        padding: 44px 15px 30px 44px;
+        right: 0;
+        top: 0;
+        background: #F2785C;
+        box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+        border-radius: 10px;
+        white-space: nowrap;
+        transform: translateX(0%);
+        transition: .4s all linear;
+        z-index: 100;
+    }
+
+    .header_nav-active {
+        transform: translateX(100%);
+    }
+
+    .header_nav-close {
+        background: url(./assets/svg/close.svg);
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .header_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 90;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        display: block;
+        transform: translateX(0%);
+    }
+
+    .header_overlay-active {
+        transform: translateX(100%);
+    }
+
+    .header_list {
+        gap: 10px;
+        justify-content: end;
+    }
+
+    .header_item {
+        margin: 0;
+    }
+
+    .header_burger {
+        width: 35px;
+        height: 32px;
+        margin-left: 0;
+        margin-right: 4px;
+        background: url(./assets/svg/eva_menu-outline.svg);
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .preview_title {
+        display: none;
+    }
+
+    .preview_subtitle {
+        display: none;
+    }
+
+    .search_form {
+        height: 48px;
+        margin-top: 110px;
+        padding-left: 15px;
+        padding-right: 9px;
+        padding-bottom: 1px;
+    }
+
+    .search_form-submit {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .search_form-field::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .steps_title {
+        margin-bottom: 20px;
+    }
+
+    .steps_card-thumb {
+        width: 35px;
+        height: 35px;
+    }
+
+    .steps_card-icon {
+        margin-bottom: 20px;
+    }
+
+    .steps_cards {
+        padding: 0;
+    }
+
+    .icon-one {
+        margin-left: 15px;
+    }
+
+    .icon-three {
+        margin-right: 15px;
+    }
+
+    .steps_subtitles-one {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .steps_subtitles-three {
+        margin-left: 38px;
+    }
+
+    .thumb-three {
+        width: 40px;
+    }
+
+    .steps_cards {
+        margin-bottom: 20px;
+    }
+
+    .title_destinations {
+        margin-bottom: 20px;
+    }
+
+    .destinations_slider-title {
+        bottom: 0px;
+        top: 8px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .destinations_cards {
+        margin-bottom: 10px;
+    }
+
+    .destinations_pagination {
+        position: relative;
+        margin-top: -30px;
+        margin-bottom: 22px;
+        z-index: 1;
+        gap: 6px;
+    }
+
+    .destinations_ellipse_2, .destinations_ellipse_3 {
+        width: 8px;
+        height: 8px;
+        background: rgba(242, 120, 92, 0.5);
+    }
+    
+    .destinations_ellipse_1 {
+        width: 8px;
+        height: 8px;
+        background: #F2785C;
+    }
+
+    .destinations_form-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 6px;
+        width: 92px;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .destinations_form-button-pic {
+        width: 9px;
+        height: 6px;
+    }
+
+    .destinations_form-button-title {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .stories_title {
+        margin-bottom: 10px;
+    }
+
+    .stories_wrapper-bg {
+        padding: 10px 15px;
+    }
+
+    .stories_form {
+        margin-top: -5px;
+    }
+
+    .stories_form-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 6px;
+        width: 92px;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .stories_form-button-pic {
+        width: 9px;
+        height: 6px;
+    }
+
+    .stories_form-button-title {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .stories_story {
+        margin-bottom: 15px;
+    }
+
+    .story_wrapper {
+        margin-left: 10px;
+        padding-top: 5px;
+    }
+
+    .stories_story-title {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .stories_story-text {
+        -webkit-line-clamp: 8;
+    }
+
+    .stories_img {
+        max-width: 100%;
+    }
+
+    .footer {
+        height: 65px;
+    }
+
+    .footer_contacts_2 {
+        padding-left: 8px;
+        padding-bottom: 2px;
+    }
+
+    .right_arrow {
+        border: solid #F2785C;;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        right: 29px;
+        bottom: 253px;
+        transform: rotate(-45deg);
+    }
+
+    .left_arrow {
+        border: solid rgba(242, 120, 92, 0.5);
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        left: 29px;
+        bottom: 253px;
+        transform: rotate(135deg);
+    }
+
+}
+
+@media (max-width: 365px) {
+    .stories_story-text {
+        -webkit-line-clamp: 6;
+    }
+
+    .destinations_slider-title {
+        left: 30px;
+    }
+}
+
