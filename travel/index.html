@@ -7,7 +7,6 @@
     <title>Travel</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/svg/icons8-wedding-travel-50.ico">
-    <script src="./index.js"></script>
 </head>
 <body>
     <header class="header">
@@ -16,22 +15,31 @@
                 <img class="header_logo-pic" src="./assets/svg/vector.svg" alt="Travel Portal ">
                 <p class="header_logo-title">Travel Portal</p>
             </div>
-            <nav class="header_nav">
+            <nav class="header_nav header_nav-active">
                 <ul class="header_list">
                     <li class="header_item">
-                        <a href="#preview" class="header_link">How It Works</a>
+                        <a href="#preview" class="header_link close">How It Works</a>
                     </li>
                     <li class="header_item">
-                        <a href="#steps" class="header_link">Plan Your Trip</a>
+                        <a href="#steps" class="header_link close">Plan Your Trip</a>
                     </li>
                     <li class="header_item">
-                        <a href="#destinations" class="header_link">Destinations</a>
+                        <a href="#destinations" class="header_link close">Destinations</a>
                     </li>
                     <li class="header_item">
-                        <a href="#stories" class="header_link">Travel Stories</a>
+                        <a href="#stories" class="header_link close">Travel Stories</a>
+                    </li>
+                    <li class="header_item burger">
+                        <a href="#!" class="header_link close">Account</a>
+                    </li>
+                    <li class="header_item burger">
+                        <a href="#socialMedia" class="header_link close">Social Media</a>
                     </li>
                 </ul>
+                <div class="header_nav-close close"></div>
             </nav>
+            <div class="header_overlay header_overlay-active"></div>
+            <div class="header_burger burger"></div>
             <form class="login_form">   
                 <button type="button" class="login_form-button">Login</button>
             </form>
@@ -159,11 +167,13 @@
 
         </div>
         <p class="footer_title">All Rights Reserved © Travel Portal</p>
-        <ul class="footer_contacts_2">
+        <ul class="footer_contacts_2" id="socialMedia">
             <li><a href="https://github.com/mercartem"><img src="./assets/svg/inst.svg" alt="instagram"></a></li>
             <li><a href="https://rs.school/js/"><img src="./assets/svg/yt.svg" alt="youtube"></a></li>
             <li><img src="./assets/svg/twit.svg" alt="twitter"></li>
         </ul>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html> 
