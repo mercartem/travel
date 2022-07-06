@@ -497,7 +497,6 @@ body {
 
 .header_list {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .header_logo {
@@ -847,6 +846,7 @@ body {
 
 /*Stories style start*/
 
+
 .stories_title {
     display: flex;
     justify-content: center;
@@ -1132,10 +1132,11 @@ body {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
     
     .header {
         background: url(./assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 2.jpg) no-repeat center;
+        background-size: cover;
         height: 251px;
     }
 
@@ -1165,6 +1166,7 @@ body {
 
     .footer {
         background: url(./assets/img/Rectangle\ 28.jpg) no-repeat center -628px;
+        background-size: cover;
     }
 
     .header_logo-title {
@@ -1438,6 +1440,17 @@ body {
         padding-bottom: 2px;
     }
 
+}
+
+@media (max-width: 390px) {
+    .footer {
+        background-size: auto;
+    }
+
+    .stories_wrapper {
+        background-size: auto;
+    }
+
     .right_arrow {
         border: solid #F2785C;;
         border-width: 0 4px 4px 0;
@@ -1459,7 +1472,6 @@ body {
         bottom: 253px;
         transform: rotate(135deg);
     }
-
 }
 
 @media (max-width: 365px) {
@@ -1471,4 +1483,3 @@ body {
         left: 30px;
     }
 }
-
