@@ -30,7 +30,7 @@
                         <a href="#stories" class="header_link close">Travel Stories</a>
                     </li>
                     <li class="header_item burger">
-                        <a href="#!" class="header_link close">Account</a>
+                        <a href="#!" class="header_link close" id="account">Account</a>
                     </li>
                     <li class="header_item burger">
                         <a href="#socialMedia" class="header_link close">Social Media</a>
@@ -44,6 +44,40 @@
                 <button type="button" class="login_form-button">Login</button>
             </form>
         </div>
+        <div class="popup">
+            <div class="popup_login popup_login-active">
+                <div class="popup_wrapper">
+                    <h2 class="popup_title">Log in to your account</h2>
+                    <div class="register_wrapper">
+                        <div class="popup_form_fb">
+                            <img src="./assets/svg/fb.svg" alt="Facebook" class="logo_fb">
+                            <p class="fb_title">Sign In with Facebook</p>
+                        </div>
+                        <div class="popup_form_google">
+                            <img src="./assets/svg/google.svg" alt="Google" class="logo_google">
+                            <p class="google_title">Sign In with Google</p>
+                        </div>
+                        <div class="popup_line">
+                            <div class="line_1"></div>
+                            <p class="line_title">or</p>
+                            <div class="line_2"></div>
+                        </div>
+                    </div>
+                    <form class="register">
+                        <p class="email_title">E-mail</p>
+                        <input type="email" class="email_input">
+                        <p class="password_title">Password</p>
+                        <input type="password" class="password_input">
+                        <button type="submit" class="button_register">Sign In</button>
+                    </form>
+                    <div class="link_title">
+                        <a href="#!" class="popup_link">Forgot Your Password?</a>
+                    </div>
+                    <div class="popup_footer"><span class="question">Don`t have an account?&nbsp;</span><span class="link_popup-sign">Register</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_overlay popup_overlay-active"></div>
     </header>
     <main class="main">
         <section class="preview" id="preview">
@@ -82,20 +116,30 @@
         <section class="destinations" id="destinations">
             <h2 class="title_destinations">POPULAR DESTINATIONS</h2>
             <ul class="destinations_cards">
-                <li class="destinations_slider-item">
+                <li class="destinations_slider-item USA">
+                    <img class="destinations_card desktop" src="./assets/img/usa.jpg" alt="USA">
+                    <img class="destinations_card mobile" src="./assets/img/usa2.jpg" alt="USA">
+                    <div class="destinations_slider-title">USA</div>
+                </li>
+                <li class="destinations_slider-item Spain">
                     <img class="destinations_card desktop" src="./assets/img/spain.jpg" alt="Spain">
                     <img class="destinations_card mobile" src="./assets/img/spain2.jpg" alt="Spain">
                     <div class="destinations_slider-title">SPAIN</div>
                 </li>
-                <li class="destinations_slider-item">
+                <li class="destinations_slider-item Japan">
                     <img class="destinations_card desktop" src="./assets/img/japan.jpg" alt="Japan">
                     <img class="destinations_card mobile" src="./assets/img/japan2.jpg" alt="Japan">
                     <div class="destinations_slider-title">JAPAN</div>
                 </li>
-                <li class="destinations_slider-item">
+                <li class="destinations_slider-item USA">
                     <img class="destinations_card desktop" src="./assets/img/usa.jpg" alt="USA">
                     <img class="destinations_card mobile" src="./assets/img/usa2.jpg" alt="USA">
                     <div class="destinations_slider-title">USA</div>
+                </li>
+                <li class="destinations_slider-item Spain">
+                    <img class="destinations_card desktop" src="./assets/img/spain.jpg" alt="Spain">
+                    <img class="destinations_card mobile" src="./assets/img/spain2.jpg" alt="Spain">
+                    <div class="destinations_slider-title">SPAIN</div>
                 </li>
             </ul>
             <div class="right_arrow"></div>
@@ -175,5 +219,7 @@
     </footer>
     <script src="./js/index.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/popup.js"></script>
 </body>
 </html> 
