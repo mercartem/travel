@@ -577,6 +577,231 @@ body {
     background: #0d3f48;
 }
 
+.popup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.popup_login-active {
+    transform: translateY(-150%);
+}
+
+.popup_login {
+    position: absolute;
+    width: 650px;
+    top: 80px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    transition: .4s all linear;
+    z-index: 100;
+}
+
+.popup_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 45px;
+    padding-bottom: 0;
+}
+
+.popup_title {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    margin-bottom: 30px;
+}
+
+.popup-active {
+    display: none;
+}
+
+.register_wrapper {
+    width: 100%;
+}
+
+.popup_form_fb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    width: 100%;
+    height: 56px;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fb_title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.popup_form_google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    width: 100%;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.google_title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+}
+
+.popup_line {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.line_1 {
+    border: 1px solid rgba(13, 96, 111, 0.5);
+    width: 261px;
+    height: 0;
+}
+
+.line_2 {
+    border: 1px solid rgba(13, 96, 111, 0.5);
+    width: 261px;
+    height: 0;
+}
+
+.line_title {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.register {
+    width: 100%;
+}
+
+.email_title, .password_title {
+    align-content: flex-start;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;   
+}
+
+.email_input, .password_input {
+    width: 100%;
+    height: 54px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: 0;
+    margin-bottom: 22px;
+}
+
+.button_register {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.button_register:hover, .button_register:focus, .button_register:active {
+    background: #0d3f48;
+}
+
+.popup_link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;   
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.link_title {
+
+}
+
+.popup_footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 26px;
+    border-top: 2px solid rgba(13, 96, 111, 0.5);
+    transform: rotate(0.1deg);
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.link_popup-sign {
+    text-decoration: underline;
+    color: #0D606F;   
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    cursor: pointer;
+}
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: block;
+    transform: translateX(0%);
+}
+
+.popup_overlay-active {
+    transform: translateX(100%);
+}
+
 /* Header style finish*/
 
 
@@ -742,6 +967,11 @@ body {
 
 /*Destinations style start*/
 
+.destinations {
+    position: relative;
+    overflow: hidden;
+}
+
 .title_destinations {
     display: flex;
     justify-content: center;
@@ -755,11 +985,12 @@ body {
 }
 
 .destinations_cards {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 60px;
-    overflow: hidden;
     margin-bottom: 24px;
+    transition: all linear 1s;
 }
 
 .destinations_card {
@@ -768,6 +999,24 @@ body {
 
 .destinations_slider-item {
     position: relative;
+}
+
+.right_arrow {
+    position: absolute;
+    left: 0;
+    bottom: 220px;
+    width: 260px;
+    height: 800px;
+    cursor: pointer;
+}
+
+.left_arrow {
+    position: absolute;
+    right: 0;
+    bottom: 220px;
+    width: 260px;
+    height: 800px;
+    cursor: pointer;
 }
 
 .mobile {
@@ -794,7 +1043,14 @@ body {
     margin-bottom: 40px;
 }
 
-.destinations_ellipse_1, .destinations_ellipse_3 {
+.destinations_ellipse_1 {
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+}
+
+.destinations_ellipse_3 {
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
@@ -1073,14 +1329,6 @@ body {
         height: 210px;
     }
 
-    .destinations_slider-item:nth-child(1) {
-        order: 2;
-    }
-
-    .destinations_slider-item:nth-child(2) {
-        order: 3;
-    }
-
     .destinations_pagination {
         margin-bottom: 20px;
     }
@@ -1130,9 +1378,56 @@ body {
     .footer_title {
         display: none;
     }
+
+    .popup_title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .fb_title, .google_title {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .popup_login {
+        width: 80%;
+    }
 }
 
 @media (max-width: 425px) {
+
+    .popup_login {
+        top: -170px;
+    }
+
+    .popup_wrapper {
+        padding: 15px 25px;
+    }
+
+    .popup_title {
+        margin-bottom: 10px;
+    }
+
+    .popup_form_fb {
+        margin-bottom: 10px;
+    }
+
+    .popup_form_google {
+        margin-bottom: 15px;
+    }
+
+    .email_input {
+        margin-bottom: 10px;
+    }
+
+    .password_input {
+        margin-bottom: 15px;
+    }
+
+    .popup_footer {
+        margin-top: 15px;
+        padding: 10px;
+    }
     
     .header {
         background: url(./assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 2.jpg) no-repeat center;
@@ -1442,6 +1737,32 @@ body {
         padding-bottom: 2px;
     }
 
+    .left_arrow {
+        border: solid #F2785C;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        right: 30px;
+        bottom: 156px;
+        transform: rotate(-45deg);
+        width: 0;
+        height: 0;
+    }
+
+    .right_arrow {
+        border: solid #F2785C;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        left: 30px;
+        bottom: 156px;
+        transform: rotate(135deg);
+        width: 0;
+        height: 0;
+    }
+
 }
 
 @media (max-width: 390px) {
@@ -1452,28 +1773,6 @@ body {
     .stories_wrapper {
         background-size: auto;
     }
-
-    .right_arrow {
-        border: solid #F2785C;;
-        border-width: 0 4px 4px 0;
-        display: inline-block;
-        padding: 7px;
-        position: absolute;
-        right: 29px;
-        bottom: 253px;
-        transform: rotate(-45deg);
-    }
-
-    .left_arrow {
-        border: solid rgba(242, 120, 92, 0.5);
-        border-width: 0 4px 4px 0;
-        display: inline-block;
-        padding: 7px;
-        position: absolute;
-        left: 29px;
-        bottom: 253px;
-        transform: rotate(135deg);
-    }
 }
 
 @media (max-width: 365px) {
@@ -1483,5 +1782,13 @@ body {
 
     .destinations_slider-title {
         left: 30px;
+    }
+
+    .right_arrow {
+        right: 300px;
+    }
+
+    .left_arrow {
+        left: 300px;
     }
 }
