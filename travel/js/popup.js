@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const toggler = () => {
         popup.classList.toggle('popup_login-active');
         overlayPopup.classList.toggle('popup_overlay-active');
-        popup.classList.contains('popup_login-active') ? document.body.style.overflow = '' : document.body.style.overflow = 'hidden';
     }
 
     const getRegister = () => {

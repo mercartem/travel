@@ -588,9 +588,8 @@ body {
 }
 
 .popup_login {
-    position: absolute;
+    position: fixed;
     width: 650px;
-    top: 80px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
@@ -1397,7 +1396,7 @@ body {
 @media (max-width: 425px) {
 
     .popup_login {
-        top: -170px;
+        top: 80px;
     }
 
     .popup_wrapper {
