@@ -15,7 +15,15 @@
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
+        <button class="volume player-icon"></button>
+        <input type="range" class="volume-progress" min="0" max="1" step="0.01" value="0.5">
       </div>
+      <div class="play-timer">
+        <div class="time-now">00:00</div>
+        <div class="play-title"></div>
+        <div class="duration">00:00</div>
+      </div>
+      <input type="range" class="play-progress">
       <ul class="play-list">
         <!-- <li class="play-item">Aqua Caelestis</li>
         <li class="play-item">River Flows In You</li>
@@ -44,7 +52,7 @@
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" />
+      <input type="text" class="name" placeholder="[Enter name]" />
     </div>
   </main>
   <footer class="footer">

@@ -30,14 +30,14 @@ const showDate = () => {
     const time = document.querySelector('.date');
     const date = new Date();
     const options = {weekday: 'long', month: 'long', day: 'numeric'};
-    const currentTime = date.toLocaleDateString(0, options);
+    const currentTime = date.toLocaleDateString('en-Br', options);
     time.textContent = currentTime;
 };
 
 function showTime() {
     const time = document.querySelector('.time');
     const date = new Date();
-    const currentTime = date.toLocaleTimeString(0, { hour12: false });
+    const currentTime = date.toLocaleTimeString('en-Br', { hour12: false });
     time.textContent = currentTime;
     showGreeting();
     showDate();
@@ -178,37 +178,58 @@ changeQuote.addEventListener('click', getQuotes);
 
 const playBtn = document.querySelector('.play');
 const audio = new Audio();
+const durationSound = document.querySelector('.duration');
 let isPlay = false;
 
 function playAudio() {
+    let restoreTitle = playTitle.textContent;
     audio.src = playList[playNum].src;
-    audio.currentTime = 0;
+    playTitle.textContent = playList[playNum].title;
+    durationSound.textContent = playList[playNum].duration;
+    if (restoreTitle != playList[playNum].title) {
+        audio.currentTime = 0;
+    } else {
+        audio.currentTime = progressBar.value;
+    }
     if (isPlay === false) {
         audio.play();
         isPlay = true;
+        for (let i = 0; i < itemBefore.length; i++) {
+            if (itemBefore[i].classList.contains('item-active') === true) {
+                itemBefore[i].classList.remove('item-active');
+            }
+        }
         itemBefore[playNum].classList.add('item-active');
+        playBtn.classList.add('pause');
+        for (let i = 0; i < playMini.length; i++) {
+            if (playMini[i].classList.contains('pause-mini') === true) {
+                playMini[i].classList.remove('pause-mini');
+            }
+        }
+        playMini[playNum].classList.add('pause-mini');
     } else {
         audio.pause();
         isPlay = false;
+        playBtn.classList.remove('pause');
+        playMini[playNum].classList.remove('pause-mini');
     }
 }
 playBtn.addEventListener('click', playAudio);
-
-function toggleBtn() {
-    if (isPlay === false) {
-        playBtn.classList.remove('pause');
-    } else {
-        playBtn.classList.add('pause');
-    }
-}
-playBtn.addEventListener('click', toggleBtn);
 
 let playNum = 0;
 
 function playSlideAudio() {
     audio.src = playList[playNum].src;
+    playTitle.textContent = playList[playNum].title;
+    durationSound.textContent = playList[playNum].duration;
     audio.play();
     playBtn.classList.add('pause');
+    for (let i = 0; i < playMini.length; i++) {
+        if (playMini[i].classList.contains('pause-mini') === true) {
+            playMini[i].classList.remove('pause-mini');
+        }
+    }
+    playMini[playNum].classList.add('pause-mini');
     isPlay = true;
 }
 
@@ -253,6 +274,94 @@ playList.forEach(el => {
 })
 
 const itemBefore = document.querySelectorAll('.play-item');
+
+itemBefore.forEach(el => {
+    const div = document.createElement('div');
+
+    div.classList.add('play-mini');
+    el.append(div);
+})
+
+// advanced aidio
+
+const playTitle = document.querySelector('.play-title');
+const progressBar = document.querySelector('.play-progress');
+const playMini = document.querySelectorAll('.play-mini');
+
+for (let i = 0; i < playMini.length; i++) {
+    playMini[i].addEventListener('click', () => {
+        playNum = i;
+        if (isPlay === true && playMini[i].classList.contains('pause-mini') === false) {
+            isPlay = false;
+            progressBar.value = 0;
+            playAudio();
+        } else {
+            playAudio();
+        }
+    })    
+}
+
+const volumeProgress = document.querySelector('.volume-progress');
+const volume = document.querySelector('.volume');
+
+volumeProgress.addEventListener('input', () => {
+    audio.volume = volumeProgress.value;
+    if (audio.volume === 0) {
+        volume.classList.add('mute');
+    } else {
+        volume.classList.remove('mute');
+    }
+})
+
+let restoreValue;
+function muteSound() {
+    if (volumeProgress.value != 0) {
+        restoreValue = volumeProgress.value;
+        audio.volume = 0;
+        volumeProgress.value = 0;
+        volume.classList.add('mute');
+    } else {
+        volume.classList.remove('mute');
+        volumeProgress.value = restoreValue;
+        audio.volume = volumeProgress.value;
+    }
+}
+
+volume.addEventListener('click', muteSound);
+
+const current = document.querySelector('.time-now');
+
+function updateProgressValue() {
+    progressBar.max = audio.duration;
+    progressBar.value = audio.currentTime;
+    current.innerHTML = (formatTime(Math.floor(audio.currentTime)));
+};
+
+function formatTime(seconds) {
+    let min = Math.floor((seconds / 60));
+    let sec = Math.floor(seconds - (min * 60));
+    if (sec < 10){ 
+        sec  = `0${sec}`;
+    };
+    return `${min}:${sec}`;
+};
+
+setInterval(updateProgressValue, 500);
+
+function changeProgressBar() {
+    audio.currentTime = progressBar.value;
+};
+
+progressBar.addEventListener('input', changeProgressBar);
+
+// languages
+
+
+
+
+
+
+
 
 
 
