@@ -56,12 +56,51 @@
     </div>
   </main>
   <footer class="footer">
-    <button class="change-quote"></button>
-    <div>
+    <div class="settings player-icon"></div>
+    <div class="quotes">
+      <button class="change-quote"></button>
       <div class="quote"></div>
       <div class="author"></div>
     </div>
+    <div class="todo-list"></div>
   </footer>
+  <div class="popup">
+    <div class="popup-settings">
+      <h2 class="popup-title">Settings</h2>
+      <div class="popup-wrapper">
+        <div class="setting">
+          <h4 class="change-language">Select app language:</h4><p class="change-setting language">English</p>
+        </div>
+        <div class="setting">
+          <h4 class="change-img">Select images source:</h4><p class="change-setting image">GitHub</p>
+        </div>
+        <input class='tag' type="text" placeholder="Enter tag">
+        <h3 class="popup-title2">Visible blocks</h3>
+        <div class="setting">
+          <h4 class="block-name">Time:</h4><p class="change-setting show">Show</p>
+        </div>
+        <div class="setting">
+          <h4 class="block-name">Date:</h4><p class="change-setting show">Show</p>
+        </div>
+        <div class="setting">
+          <h4 class="block-name">Greeting:</h4><p class="change-setting show">Show</p>
+        </div>
+        <div class="setting">
+          <h4 class="block-name">Quote:</h4><p class="change-setting show">Show</p>
+        </div>
+        <div class="setting">
+          <h4 class="block-name">Weather:</h4><p class="change-setting show">Show</p>
+        </div>
+        <div class="setting">
+          <h4 class="block-name">Player:</h4><p class="change-setting show">Show</p>
+        </div>
+        <!-- <div class="setting">
+          <h4 class="block-name">ToDo list:</h4><p class="change-setting show">Show</p>
+        </div> -->
+      </div>
+    </div>
+    <div class="popup-overlay"></div>
+  </div>
   <script type="module" src="js/script.js"></script>
 </body>
 </html>
