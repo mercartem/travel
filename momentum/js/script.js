@@ -38,17 +38,18 @@ const setLocalStorageSetting = () => {
 window.addEventListener('beforeunload', setLocalStorageSetting)
 
 const getLocalStorageSetting = () => {
-    key = localStorage.getItem('lang');
-    chooseImg.textContent = localStorage.getItem('img');
-    tagImg = localStorage.getItem('tag');
-    tag.value = localStorage.getItem('tag');
-    let arrayShow = JSON.parse(localStorage.getItem('show'));
-    for (let i = 0; i < show.length; i++) {
-        show[i].textContent = arrayShow[i];
+    if (localStorage.getItem('lang')) {
+        key = localStorage.getItem('lang');
+        chooseImg.textContent = localStorage.getItem('img');
+        tagImg = localStorage.getItem('tag');
+        tag.value = localStorage.getItem('tag');
+        let arrayShow = JSON.parse(localStorage.getItem('show'));
+        for (let i = 0; i < show.length; i++) {
+            show[i].textContent = arrayShow[i];
+        }
     }
 }
-window.addEventListener('load', getLocalStorageSetting)
-getLocalStorageSetting();
+getLocalStorageSetting()
 
 const state = {
     changeLanguage: 'en',
@@ -96,6 +97,13 @@ const getAppLanguage = (key) => {
         todoBtn.textContent = 'Список дел';
         todoOpt.textContent = 'Входящие';
         todoPlaceholder.placeholder = 'Новая задача';
+        for (let i = 0; i < show.length; i++) {
+            if (show[i].textContent === 'Видно' || show[i].textContent === 'Show') {
+                show[i].textContent = 'Видно';
+            } else {
+                show[i].textContent = 'Скрыто';
+            }
+        }
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[0][i];
         }
@@ -108,6 +116,13 @@ const getAppLanguage = (key) => {
         todoBtn.textContent = 'Todo';
         todoOpt.textContent = 'Inbox';
         todoPlaceholder.placeholder = 'New Todo';
+        for (let i = 0; i < show.length; i++) {
+            if (show[i].textContent === 'Show' || show[i].textContent === 'Видно') {
+                show[i].textContent = 'Show';
+            } else {
+                show[i].textContent = 'Hide';
+            }
+        }
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[1][i];
         }
@@ -284,11 +299,14 @@ const wind = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const weatherError = document.querySelector('.weather-error');
 const city = document.querySelector('.city');
+
+console.log(key)
 if (key === 'ru') {
     document.querySelector('.city').value = 'Минск';
 } else {
     document.querySelector('.city').value = 'Minsk';
 }
+
 
 const setLocalStorageWeather = () => {
     localStorage.setItem('city', city.value);
@@ -757,11 +775,6 @@ const getLocalStorageTodo = () => {
     }
 }
 getLocalStorageTodo();
-
-
-
-
-
 
 
 
