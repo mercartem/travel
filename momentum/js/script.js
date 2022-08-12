@@ -38,7 +38,7 @@ const setLocalStorageSetting = () => {
 window.addEventListener('beforeunload', setLocalStorageSetting)
 
 const getLocalStorageSetting = () => {
-    if (localStorage.getItem('lang')) {
+    if (localStorage.getItem('lang') !== null) {
         key = localStorage.getItem('lang');
         chooseImg.textContent = localStorage.getItem('img');
         tagImg = localStorage.getItem('tag');
