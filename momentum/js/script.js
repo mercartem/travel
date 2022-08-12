@@ -53,7 +53,7 @@ getLocalStorageSetting();
 const state = {
     changeLanguage: 'en',
     photoSource: 'github',
-    blocks: ['time', 'date','greeting-container', 'quotes', 'weather', 'player', 'todolist']
+    blocks: ['time', 'date','greeting-container', 'quotes', 'weather', 'player', 'todo-list']
 }
 
 const ShowBlocks = () => {
@@ -77,7 +77,10 @@ const settingsTitle = document.querySelector('.popup-title');
 const settingsTitle2 = document.querySelector('.popup-title2')
 const settingLanguage = document.querySelector('.change-language');
 const settingImage = document.querySelector('.change-img');
-const blockName = document.querySelectorAll('.block-name')
+const todoBtn = document.querySelector('.todo-list');
+const todoOpt = document.querySelector('.todo-options');
+const todoPlaceholder = document.querySelector('.todo-text');
+const blockName = document.querySelectorAll('.block-name');
 const arrayBlocks = [
                     ['Время:', 'Дата:', 'Приветствие:', 'Цитата:', 'Погода:', 'Плеер:', 'Список дел:'], 
                     ['Time:', 'Date:','Greeting:', 'Quote:', 'Weather:', 'Player:', 'ToDo list:']
@@ -90,6 +93,9 @@ const getAppLanguage = (key) => {
         settingLanguage.textContent = 'Выбрать язык приложения:';
         settingImage.textContent = 'Выбрать источник изображений:';
         settingsTitle2.textContent = 'Отображаемые блоки';
+        todoBtn.textContent = 'Список дел';
+        todoOpt.textContent = 'Входящие';
+        todoPlaceholder.placeholder = 'Новая задача';
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[0][i];
         }
@@ -99,6 +105,9 @@ const getAppLanguage = (key) => {
         settingLanguage.textContent = 'Select app language:';
         settingImage.textContent = 'Select images source:';
         settingsTitle2.textContent = 'Visible blocks';
+        todoBtn.textContent = 'Todo';
+        todoOpt.textContent = 'Inbox';
+        todoPlaceholder.placeholder = 'New Todo';
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[1][i];
         }
@@ -113,6 +122,10 @@ language.addEventListener('click', () => {
         settingLanguage.textContent = 'Выбрать язык приложения:';
         settingImage.textContent = 'Выбрать источник изображений:';
         settingsTitle2.textContent = 'Отображаемые блоки';
+        todoBtn.textContent = 'Список дел';
+        todoOpt.textContent = 'Входящие';
+        todoPlaceholder.placeholder = 'Новая задача';
+
         for (let i = 0; i < show.length; i++) {
             if (show[i].textContent === 'Show') {
                 show[i].textContent = 'Видно';
@@ -130,6 +143,9 @@ language.addEventListener('click', () => {
         settingLanguage.textContent = 'Select app language:';
         settingImage.textContent = 'Select images source:';
         settingsTitle2.textContent = 'Visible blocks';
+        todoBtn.textContent = 'Todo';
+        todoOpt.textContent = 'Inbox';
+        todoPlaceholder.placeholder = 'New Todo';
         for (let i = 0; i < show.length; i++) {
             if (show[i].textContent === 'Видно') {
                 show[i].textContent = 'Show';
@@ -316,7 +332,9 @@ async function getWeather(key) {
 }
 getWeather(key);
 
-city.addEventListener('change', getWeather);
+city.addEventListener('change', () => {
+    getWeather(key);
+});
 
 // quotes
 
@@ -664,6 +682,81 @@ tag.addEventListener('change', () => {
         getLinkFromUnsplash();
     }
 });
+
+// todo
+
+const todoList = document.querySelector('.todo');
+
+todoBtn.addEventListener('click', () => {
+    todoList.classList.toggle('todo-active');
+})
+
+const input = document.querySelector('.todo-text');
+const ul = document.querySelector('.todo-items');
+
+const listenDeleteTodo = (element) => {
+    element.addEventListener("click", () => {
+        element.parentElement.remove();
+    });
+}
+
+const createTodo = () => {
+    const li = document.createElement('li');
+    li.classList.add('todo-item')
+
+    const textLabel = document.createElement('label');
+    textLabel.classList.add('todo-content');
+    const check = document.createElement('input');
+    check.setAttribute('type', 'checkbox');
+    const textSpan = document.createElement('span')
+    textSpan.textContent = input.value;
+    textLabel.append(check);
+    textLabel.append(textSpan);
+
+    const deleteBtn = document.createElement('span');
+    deleteBtn.classList.add('todo-trash');
+
+    ul.appendChild(li).append(textLabel, deleteBtn);
+    input.value = '';
+    listenDeleteTodo(deleteBtn);
+
+}
+
+input.addEventListener("keypress", (key) => {
+    const keyEnter = 13;
+    if (key.which == keyEnter) {
+        createTodo();
+    }
+});
+
+const setLocalStorageTodo = () => {
+    const ul = document.querySelector('.todo-items');
+    localStorage.setItem('todo', ul.innerHTML);
+    const check = document.querySelectorAll('input[type="checkbox"]');
+    let array = [];
+    for (let i = 0; i < check.length; i++) {
+        array.push(check[i].checked);
+    }
+    localStorage.setItem('check', JSON.stringify(array));
+}
+window.addEventListener('beforeunload', setLocalStorageTodo);
+
+const getLocalStorageTodo = () => {
+    const data = localStorage.getItem('todo');
+    if (data) {
+        ul.innerHTML = data;
+    }
+    const deleteButtons = document.querySelectorAll('.todo-trash');
+    for (const button of deleteButtons) {
+        listenDeleteTodo(button);
+    }
+    const check = document.querySelectorAll('input[type="checkbox"]');
+    let array = JSON.parse(localStorage.getItem('check'));
+    for (let i = 0; i < check.length; i++) {
+        check[i].checked = array[i];
+    }
+}
+getLocalStorageTodo();
 
 
 
