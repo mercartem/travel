@@ -731,6 +731,7 @@ const createTodo = () => {
     const check = document.createElement('input');
     check.setAttribute('type', 'checkbox');
     const textSpan = document.createElement('span')
+    textSpan.classList.add('text-span')
     textSpan.textContent = input.value;
     textLabel.append(check);
     textLabel.append(textSpan);
