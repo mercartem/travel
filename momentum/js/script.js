@@ -38,7 +38,7 @@ const setLocalStorageSetting = () => {
 window.addEventListener('beforeunload', setLocalStorageSetting)
 
 const getLocalStorageSetting = () => {
-    if (localStorage.getItem('lang') !== null) {
+    if (localStorage.getItem('lang')) {
         key = localStorage.getItem('lang');
         chooseImg.textContent = localStorage.getItem('img');
         tagImg = localStorage.getItem('tag');
@@ -140,7 +140,6 @@ language.addEventListener('click', () => {
         todoBtn.textContent = 'Список дел';
         todoOpt.textContent = 'Входящие';
         todoPlaceholder.placeholder = 'Новая задача';
-
         for (let i = 0; i < show.length; i++) {
             if (show[i].textContent === 'Show') {
                 show[i].textContent = 'Видно';
@@ -150,6 +149,9 @@ language.addEventListener('click', () => {
         }
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[0][i];
+        }
+        if (document.querySelector('.city').value === 'Minsk') {
+            document.querySelector('.city').value = 'Минск'
         }
         key = 'ru';
     } else {
@@ -170,6 +172,9 @@ language.addEventListener('click', () => {
         }
         for (let i = 0; i < blockName.length; i++) {
             blockName[i].textContent = arrayBlocks[1][i];
+        }
+        if (document.querySelector('.city').value === 'Минск') {
+            document.querySelector('.city').value = 'Minsk'
         }
         key = 'en';
     }
@@ -300,7 +305,6 @@ const humidity = document.querySelector('.humidity');
 const weatherError = document.querySelector('.weather-error');
 const city = document.querySelector('.city');
 
-console.log(key)
 if (key === 'ru') {
     document.querySelector('.city').value = 'Минск';
 } else {
