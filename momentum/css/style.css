@@ -191,6 +191,8 @@ body {
 
 .weather-error {
   margin-top: -10px;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .description-container {
@@ -514,11 +516,19 @@ li {
   display: flex;
   gap: 5px;
   align-items: center;
+  width: 100%;
 }
 
 input[type="checkbox"]:checked + span {
   color: gray;
   text-decoration: line-through;
+}
+
+.text-span {
+  display: inline-block;
+  word-wrap: break-word;
+  width: 200px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
