@@ -562,10 +562,6 @@ input[type="checkbox"]:checked + span {
     height: auto;
   }
 
-  .footer {
-    height: auto;
-  }
-
   .greeting {
     display: block;
     text-align: center;
