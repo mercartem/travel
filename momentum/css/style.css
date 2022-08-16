@@ -363,7 +363,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 25px 45px;
-  transform: translateY(200%);
+  transform: translateY(300%);
   transition: .7s all linear;
   z-index: 100;
 }
@@ -554,12 +554,29 @@ input[type="checkbox"]:checked + span {
 
 @media (max-width: 450px) {
 
-  .greeting-container {
-    display: flex;
-    flex-direction: column;
+  .header {
+    order: 2;
+  }
+
+  .main {
+    order: 1;
+  }
+
+  .footer {
+    order: 3;
+  }
+
+  .time {
+    font-size: 54px;
+  }
+
+  .greeting {
+    display: block;
+    text-align: center;
   }
 
   .name {
+    display: block;
     font-size: 28px;
     text-align: center;
     max-width: 100%;
@@ -567,5 +584,18 @@ input[type="checkbox"]:checked + span {
 
   .city {
     max-width: 100px;
+  }
+
+  .change-quote {
+    margin-bottom: 10px;
+    background-size: 24px 24px;
+  }
+
+  .quote {
+    font-size: 12px;
+  }
+
+  .author {
+    font-size: 14px;
   }
 }
