@@ -745,12 +745,7 @@ const createTodo = () => {
 
 }
 
-input.addEventListener("keypress", (key) => {
-    const keyEnter = 13;
-    if (key.which == keyEnter) {
-        createTodo();
-    }
-});
+input.addEventListener("change", createTodo);
 
 const setLocalStorageTodo = () => {
     const ul = document.querySelector('.todo-items');
