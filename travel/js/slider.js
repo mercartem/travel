@@ -8,6 +8,7 @@ const ellipseTwo = document.querySelector('.destinations_ellipse_2');
 const ellipseThree = document.querySelector('.destinations_ellipse_3');
 
 let left = 0;
+cards.style.left = left + 'px';
 let cardWidth = document.querySelector('.destinations_slider-item').offsetWidth + 60;
 
 function init() {
