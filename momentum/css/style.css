@@ -531,6 +531,20 @@ input[type="checkbox"]:checked + span {
   text-align: left;
 }
 
+.footer-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
