@@ -1,5 +1,4 @@
-# Travel
-# https://mercartem.github.io/travel/travel/
+# [Travel](https://mercartem.github.io/travel/travel/)
 
 ## Описание проекта
 Travel – адаптивный и интерактивный landing page сайта для планирования путешествий.
